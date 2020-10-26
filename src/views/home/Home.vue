@@ -7,6 +7,7 @@
         </div>
         <div class="home-content-contain">
             <home-tabs></home-tabs>
+            <home-switch></home-switch>
         </div>
         
     </div>
@@ -17,6 +18,7 @@ import HomeHeader from './components/HomeHeader'
 import HomeSwiper from './components/HomeSwiper'
 import HomeNavIconsContain from './components/HomeNavIconsContain'
 import HomeTabs from './components/HomeTabs'
+import HomeSwitch from './components/HomeSwitch'
 
 export default {
     name: 'Home',
@@ -24,7 +26,8 @@ export default {
         HomeHeader,
         HomeSwiper,
         HomeNavIconsContain,
-        HomeTabs
+        HomeTabs,
+        HomeSwitch
     }
         
 }

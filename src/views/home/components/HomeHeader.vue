@@ -64,8 +64,8 @@
                 .swipe-slide{
                     font-size: 14px;
                     white-space: nowrap;
-				    text-overflow: ellipsis;
-				    overflow: hidden;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     .swipe-span{
                         line-height: 33px;
                     }
@@ -100,7 +100,7 @@
               class="input-home-search"
             />
             <div class="home-swipe-box">
-              <swiper :options="swiperOption" class="swiper-box">
+              <swiper :options="swiperOptions" class="swiper-box">
                 <swiper-slide v-for="(slide, index) in newsList" :key="index" class="swipe-slide">
                   <span class="swipe-span">{{ slide.title }}</span>
                 </swiper-slide>
@@ -115,8 +115,8 @@
 </template>
 
 <script>
-import "swiper/dist/css/swiper.css";
-import { swiper, swiperSlide } from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css"
+import { swiper, swiperSlide } from "vue-awesome-swiper"
 export default {
   name: "HomeHeader",
   data() {
@@ -151,20 +151,21 @@ export default {
           this.$router.push({path:'/search'})
       }
   },
-//   components: {
-//     swiper,
-//     swiperSlide,
-//   },
+  components: {
+    swiper,
+    swiperSlide,
+  },
   computed: {
-    swiperOption() {
+    swiperOptions () {
         return{
-            autoplay: {
-                delay: 2000,
-            },
             loop: true, //循环
-            direction: "vertical",
+            autoplay: {
+              delay: 1000
+             
+            }, //可选选项，自动滑动
+            slidesPerView: 1,
             speed: 1500,
-            // slidesPerView: 5,
+            direction: "vertical",
             observer: true,
             observeParents: true,
             mousewheel: false,
