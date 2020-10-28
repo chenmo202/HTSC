@@ -10,25 +10,19 @@ const routes = [
     component:() => import('../views/Tabs.vue'),
     children:[
       {
-        path:'/Home',
+        path:'/home',
         name:'Home',
         component: () => import('../views/home/Home.vue'),
         
       },
       {
-        path: '/Classify',
+        path: '/classify',
         name: 'Classify',
         component: () => import('../views/classify/Classify.vue'),
         
       },
       {
-        path: '/Shoppingcart',
-        name: 'ShoppingCart',
-        component: () => import('../views/shoppingcart/ShoppingCart.vue'),
-      
-      },
-      {
-        path: '/Mine',
+        path: '/mine',
         name: 'Mine',
         component: () => import('../views/mine/Mine.vue'),
         
@@ -36,26 +30,26 @@ const routes = [
     ]
   },
   {
-    path:'/Search',
+    path:'/search',
     name:'Search',
-    components: () => import('../views/Search.vue')
+    components: () => import('../views/search/Search.vue')
   },
   {
-    path:'/Login',
+    path:'/login',
     name:'Login',
     components: () => import('../views/login/Login.vue')
   },
   {
-    path:'/iiii',
-    name:'iiii',
-    components: () => import('../views/iiii.vue')
-    
-  }, 
+    path: '/shoppingcart',
+    name: 'ShoppingCart',
+    component: () => import('../views/shoppingcart/ShoppingCart.vue'),
+  
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes
 })
 

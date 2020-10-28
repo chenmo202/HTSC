@@ -147,9 +147,9 @@ export default {
     };
   },
   methods:{
-      searchs(){
-          this.$router.push({path:'/search'})
-      }
+    searchs(){
+      this.$router.push({path:'/Login'})
+    }
   },
   components: {
     swiper,

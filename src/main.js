@@ -22,6 +22,7 @@ Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 new Vue({
+  mode: 'history',
   router,
   axios,
   store,
