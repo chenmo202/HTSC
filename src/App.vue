@@ -3,7 +3,7 @@
     <!-- <keep-alive exclude="Detail">
       <router-view/>
     </keep-alive> -->
-    <router-view/>
+    <router-view v-wechat-title='$route.meta.title'></router-view>
   </div>
 </template>
 
@@ -22,7 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-  #app{
-    background: #f7f8fa;
-  }
+  
 </style>

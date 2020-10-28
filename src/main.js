@@ -12,6 +12,9 @@ import './assets/styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+import VueWechatTitle from 'vue-wechat-title'
+Vue.use(VueWechatTitle)
+
 Vue.use(Vant)
 Vue.use(Swipe);
 Vue.use(SwipeItem);

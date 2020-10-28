@@ -22,24 +22,34 @@
     //         height: 100%;
     //     }
     // }
-    >>>.van-swipe__indicator:not(:last-child) {
-        margin-right: 3px;
+    .banner /deep/ .van-swipe__indicator:not(:last-child) {
+        margin-right: 8px;
     }
-    >>>.van-swipe__indicator {
-        width: 10px;
-        height: 10px;
-        // border-radius: 100%;
+    .banner /deep/ .van-swipe__indicator {
+        // width: 7px;
+        // height: 7px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        opacity: 1;
+        background: hsla(0,0%,100%,0);
+       
     }
-    >>>.van-swipe__indicators {
-        bottom: 10px;
-    }   
+    .banner /deep/ .van-swipe__indicator--active {
+        // width: 7px;
+        // height: 7px;
+        background: #fff;
+        
+    }
+    
+    
     .banner{
        width: 100%;
        .my-swipe_l {
             width: 100%;
             height: 200px;
             overflow: hidden;
-            .van-swipe__track .swipe_img{
+            .van-swipe__track 
+            .swipe_img{
                 width: 100%;
                 height: 100%;
             }
@@ -65,7 +75,7 @@
     <div class="banner">
         <van-swipe class="my-swipe_l" 
             :autoplay="3000" 
-            indicator-color="red"
+            indicator-color="white"
             v-if="showSwiper"
         >
             <van-swipe-item class="swipe_item" v-for="item of swiperList" :key="item.id">

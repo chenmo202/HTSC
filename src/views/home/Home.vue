@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+<div class="home-warppr">
         <div class="header">
             <home-header></home-header>
             <home-swiper></home-swiper>
@@ -22,19 +22,22 @@ import HomeSwitch from './components/HomeSwitch'
 
 export default {
     name: 'Home',
+    beforeCreate(){
+        document.querySelector('body').setAttribute('style','background: #f7f8fa')
+    },
     components:{
         HomeHeader,
         HomeSwiper,
         HomeNavIconsContain,
         HomeTabs,
         HomeSwitch
-    }
+    },
         
 }
 </script>
 
 <style lang="scss" scoped>
-    .container{
+    .home-warppr{
         width: 100vw;
         height: 100vh;
     }

@@ -32,7 +32,6 @@
           color: #b2b2b2;
           font-weight: 600;
         }
-
         .search-text-swipe {
           position: relative;
           width: 189px;
@@ -99,7 +98,7 @@
               disableb="disabled"
               class="input-home-search"
             />
-            <div class="home-swipe-box">
+            <div class="home-swipe-box swiper-no-swiping">
               <swiper :options="swiperOptions" class="swiper-box">
                 <swiper-slide v-for="(slide, index) in newsList" :key="index" class="swipe-slide">
                   <span class="swipe-span">{{ slide.title }}</span>
@@ -148,7 +147,7 @@ export default {
   },
   methods:{
     searchs(){
-      this.$router.push({path:'/Login'})
+      this.$router.push({path:'/Search-sahuanjie'})
     }
   },
   components: {
@@ -159,17 +158,15 @@ export default {
     swiperOptions () {
         return{
             loop: true, //循环
-            autoplay: {
-              delay: 1000
-             
-            }, //可选选项，自动滑动
+            autoplay: 6000,
+             //可选选项，自动滑动
             slidesPerView: 1,
-            speed: 1500,
+            speed: 1000,
             direction: "vertical",
-            observer: true,
-            observeParents: true,
-            mousewheel: false,
-            noSwiping: true
+            // observer: true,
+            // observeParents: true,
+            // mousewheel: false,
+            // noSwiping: true
         }
     }
   }

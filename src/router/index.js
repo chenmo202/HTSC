@@ -7,6 +7,9 @@ const routes = [
     path:'/',
     name:'Tabs',
     redirect:'Home',
+    meta:{
+      keepAlive: true
+    },
     component:() => import('../views/Tabs.vue'),
     children:[
       {
@@ -30,15 +33,19 @@ const routes = [
     ]
   },
   {
-    path: '/shoppingcart',
+    path: '/Shoppingcart',
     name: 'ShoppingCart',
     component: () => import('../views/shoppingcart/ShoppingCart.vue'),
   
   },
   {
-    path:'/search',
-    name:'Search',
-    component: () => import('../views/search/Search.vue')
+    path:'/search-sahuanjie',
+    name:'Search-sahuanjie',
+    meta:{
+      title: '搜索'
+      // keepAlive: false
+    },
+    component: () => import('../views/search/Search-sahuanjie.vue')
   },
   {
     path:'/login',
