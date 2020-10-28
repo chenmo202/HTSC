@@ -30,25 +30,26 @@ const routes = [
     ]
   },
   {
-    path:'/search',
-    name:'Search',
-    components: () => import('../views/search/Search.vue')
-  },
-  {
-    path:'/login',
-    name:'Login',
-    components: () => import('../views/login/Login.vue')
-  },
-  {
     path: '/shoppingcart',
     name: 'ShoppingCart',
     component: () => import('../views/shoppingcart/ShoppingCart.vue'),
   
   },
+  {
+    path:'/search',
+    name:'Search',
+    component: () => import('../views/search/Search.vue')
+  },
+  {
+    path:'/login',
+    name:'Login',
+    component: () => import('../views/login/Login.vue')
+  },
+  
 ]
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   // base: process.env.BASE_URL,
   routes
 })

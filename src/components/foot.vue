@@ -72,7 +72,7 @@ export default {
                 {
                     title:"购物车",
                     icon:require("../assets/images/footImg/cat.png"),
-                    route:"/iiii"
+                    route:"/ShoppingCart"
                 },
                 {
                     title:"我的",
