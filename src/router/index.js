@@ -15,29 +15,31 @@ const routes = [
       {
         path:'/home',
         name:'Home',
+        meta:{shows:true},
         component: () => import('../views/home/Home.vue'),
         
       },
       {
         path: '/classify',
         name: 'Classify',
+        meta:{shows:true},
         component: () => import('../views/classify/Classify.vue'),
-        
+      },
+      {
+        path: '/Shoppingcart',
+        name: 'ShoppingCart',
+        meta:{shows:false},
+        component: () => import('../views/shoppingcart/ShoppingCart.vue')
       },
       {
         path: '/mine',
         name: 'Mine',
+        meta:{shows:true},
         component: () => import('../views/mine/Mine.vue'),
         
       }
     ]
-  },
-  {
-    path: '/Shoppingcart',
-    name: 'ShoppingCart',
-    component: () => import('../views/shoppingcart/ShoppingCart.vue'),
-  
-  },
+  }, 
   {
     path:'/search-sahuanjie',
     name:'Search-sahuanjie',

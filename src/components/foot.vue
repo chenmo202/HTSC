@@ -88,6 +88,12 @@ export default {
             if(key === this.count) return;
             this.count = key;
             this.$emit('taptabs',item)
+            // key[2].this.$router({path:route.ShoppingCart})
+            // if(this.route == key[2]){
+            //     this.$router({path:route.ShoppingCart})
+            // }else{
+            //     暂无路由
+            // }
         }
     }
     
