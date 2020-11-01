@@ -1,33 +1,47 @@
 <style lang="scss" scoped>
-    // >>>穿透作用，因为swiper-pagination-bullet-active类在组件内部定义的，想要wrapper也能作用到，可以用>>>
-    // .wrapper >>>.swiper-pagination-bullet{
-    //     background: red;
+    // /deep/穿透作用，因为swiper-pagination-bullet-active类在组件内部定义的，想要wrapper也能作用到，可以用/deep/
+    // .wrapper /deep/.swiper-pagination-bullet{
+    //     width: 5px;
+    //     height: 5px;
+    //     border: 1px solid #fff;
+    //     border-radius: 50%;
+    //     opacity: 1;
+    //     background: hsla(0,0%,100%,0);
     // }
-    // .wrapper >>>.swiper-pagination-bullet-active{
-    //     background: #fff !important
-    //     // background:hsla(0,0%,100%,0);
+    // .wrapper /deep/.swiper-pagination-bullet-active{
+    //     width: 5px;
+    //     height: 5px;
+    //     background: #ffffff;;
     // }
-    // .wrapper{
+    //  .wrapper /deep/ .swiper-container-horizontal > .swiper-pagination-bullets {
+    //     bottom: 0;
+    //     left: 0;
     //     width: 100%;
-    //     overflow: hidden;
-    //     height: 0;
-    //     padding-bottom: 54.5%;
-    //     // .swiper-container{
-    //     //     width: 100%;
-    //     //     height: 200px;
-    //     //     overflow: hidden;
-    //     // }
+    //     line-height: 30px;
+    //     text-align: center;
+    // }
+
+    // .wrapper{
+    //     // width: 100%;
+    //     // overflow: hidden;
+    //     // height: 200px;
+    //     .swiper-container{
+    //         width: 100%;
+    //         height: 200px;
+    //         overflow: hidden;
+    //     }
     //     .swiper-img{
     //         width: 100%;
     //         height: 100%;
     //     }
     // }
+
     .banner /deep/ .van-swipe__indicator:not(:last-child) {
         margin-right: 8px;
     }
     .banner /deep/ .van-swipe__indicator {
-        // width: 7px;
-        // height: 7px;
+        width: 5px;
+        height: 5px;
         border: 1px solid #fff;
         border-radius: 50%;
         opacity: 1;
@@ -35,13 +49,11 @@
        
     }
     .banner /deep/ .van-swipe__indicator--active {
-        // width: 7px;
-        // height: 7px;
+        width: 5px;
+        height: 5px;
         background: #fff;
         
     }
-    
-    
     .banner{
        width: 100%;
        .my-swipe_l {
@@ -96,7 +108,7 @@ export default {
             //     //循环
             //     loop:true,
             //     //每张播放时长3秒，自动播放
-            //     autoplay:2000,
+            //     autoplay:5000,
             //     autoplayDisableOnInteraction : false, //用户操作swiper之后，是否禁止autoplay 
             //     //滑动速度
             //     speed:1000,
