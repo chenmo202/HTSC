@@ -70,7 +70,7 @@
 </style>
 
 <template>
-    <!-- <div class="wrapper">
+    <div class="wrapper">
         <swiper :options="swiperOption" class="swiper-container">
             <swiper-slide 
                 class="swiper-item"
@@ -82,19 +82,12 @@
         
             <div class="swiper-pagination wrapper-pagin"  slot="pagination"></div>
         </swiper>
-    </div> -->
-
-    <div class="banner">
-        <van-swipe class="my-swipe_l" 
-            :autoplay="3000" 
-            indicator-color="white"
-            v-if="showSwiper"
-        >
-            <van-swipe-item class="swipe_item" v-for="item of swiperList" :key="item.id">
-                <img v-lazy="item.imgUrl" class="swipe_img"/>
-            </van-swipe-item>
-        </van-swipe>
     </div>
+
+    
+    
+
+    
 </template>
 
 <script>
