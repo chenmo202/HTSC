@@ -4,10 +4,12 @@
             <home-header></home-header>
             <home-swiper></home-swiper>
             <home-nav-icons-contain></home-nav-icons-contain>
+            
         </div>
         <div class="home-content-contain">
             <home-tabs></home-tabs>
             <home-switch></home-switch>
+            <home-tab ></home-tab>
         </div>
         
     </div>
@@ -19,6 +21,7 @@ import HomeSwiper from './components/HomeSwiper'
 import HomeNavIconsContain from './components/HomeNavIconsContain'
 import HomeTabs from './components/HomeTabs'
 import HomeSwitch from './components/HomeSwitch'
+import HomeTab from './components/HomeTab'
 
 export default {
     name: 'Home',
@@ -30,7 +33,8 @@ export default {
         HomeSwiper,
         HomeNavIconsContain,
         HomeTabs,
-        HomeSwitch
+        HomeSwitch,
+        HomeTab
     },
         
 }
