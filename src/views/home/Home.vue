@@ -10,8 +10,9 @@
             <home-tabs></home-tabs>
             <home-switch></home-switch>
             <home-tab ></home-tab>
+            <home-banner></home-banner>
         </div>
-        
+        <div style="height:80px"></div>
     </div>
 </template>
 
@@ -22,6 +23,7 @@ import HomeNavIconsContain from './components/HomeNavIconsContain'
 import HomeTabs from './components/HomeTabs'
 import HomeSwitch from './components/HomeSwitch'
 import HomeTab from './components/HomeTab'
+import HomeBanner from './components/HomeBanner'
 
 export default {
     name: 'Home',
@@ -34,7 +36,8 @@ export default {
         HomeNavIconsContain,
         HomeTabs,
         HomeSwitch,
-        HomeTab
+        HomeTab,
+        HomeBanner
     },
         
 }

@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+static/mock //不会提交本地git仓库里面，也不会提交到线上
 
 
 # local env files

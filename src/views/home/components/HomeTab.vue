@@ -47,7 +47,7 @@ export default {
 	            {
 	                title: 'thirdTab',
 	                tab_con: 'thirdTab'
-	            }
+                },
 	        ]
         }
     },

@@ -35,8 +35,7 @@ const routes = [
         path: '/mine',
         name: 'Mine',
         meta:{shows:true},
-        component: () => import('../views/mine/Mine.vue'),
-        
+        component: () => import('../views/mine/Mine.vue'), 
       }
     ]
   }, 
@@ -54,13 +53,23 @@ const routes = [
     name:'Login',
     component: () => import('../views/login/Login.vue')
   },
+
+  {
+    path:'/detail/:id',
+    name:'Detail',
+    component: () => import('../views/detail/Detail.vue')
+  },
+
   
 ]
 
 const router = new VueRouter({
   mode: 'history',
   // base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to,from,savedPosition){//进入新的页面初始化在顶部显示
+    return {x:0,y:0}
+  }
 })
 
 export default router
